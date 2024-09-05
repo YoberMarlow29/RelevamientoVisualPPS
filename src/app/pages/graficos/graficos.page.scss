@@ -1,0 +1,87 @@
+ion-content {
+  --background: rgb(66, 182, 190);
+  background-image: radial-gradient(circle, rgba(0,0,0,0.1) 1px, transparent 1px);
+  background-size: 10px 10px;
+  overflow: hidden;
+}
+
+.header {
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.chart-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chart-wrapper {
+  width: 90%;
+  height: 400px; /* Adjust the height as needed */
+  position: relative;
+  background-color: #ffffff; /* Background color for the chart */
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.chart-info-list {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px;
+  width: 90%;
+}
+
+.chart-info-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #ffffff; /* Text color */
+}
+
+.color-square {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.exit-button {
+  margin-top: 10px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+ion-label {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+ion-button.exit-button {
+  --background: linear-gradient(to right, #ff4b1f, #ff9068);
+  color: white;
+  width: 100%;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 10px;
+}

@@ -1,0 +1,22 @@
+<ion-content>
+  <div class="header">
+    ESTADÍSTICAS
+  </div>
+  <div class="chart-container">
+    <h2 *ngIf="currentSection === 'cosaslindas'">GRAFICO DE EDIFICIOS LINDOS</h2>
+    <h2 *ngIf="currentSection === 'cosasfeas'">GRAFICO DE EDIFICIOS FEOS</h2>
+    <div class="chart-wrapper">
+      <canvas #pipeChart *ngIf="currentSection === 'cosaslindas'"></canvas>
+      <canvas #barChart *ngIf="currentSection === 'cosasfeas'"></canvas>
+    </div>
+    <ul class="chart-info-list">
+      <li *ngFor="let item of chartInfoList">
+        <span class="color-square" [style.backgroundColor]="item.color"></span>
+        {{ item.name }} - {{ item.date }}
+      </li>
+    </ul>
+  </div>
+  <ion-button class="exit-button" [routerLink]="['/' + currentSection]">
+    <ion-label>VOLVER ATRÁS</ion-label>
+  </ion-button>
+</ion-content>

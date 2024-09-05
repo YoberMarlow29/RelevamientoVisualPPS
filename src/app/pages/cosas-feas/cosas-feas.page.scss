@@ -1,0 +1,146 @@
+ion-content {
+  --background: rgb(66, 182, 190);
+  background-image: radial-gradient(circle, rgba(0,0,0,0.1) 1px, transparent 1px);
+  background-size: 10px 10px;
+  overflow: hidden;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-bottom: 2px solid black;
+}
+
+.header-title {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.button-back {
+  display: flex;
+  align-items: center;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 24px; /* Ajusta el padding para aumentar el tamaño */
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 18px; /* Ajusta el tamaño de la fuente */
+}
+
+.button-back ion-icon {
+  margin-right: 8px;
+}
+
+.button-back:hover {
+  background-color: #0056b3;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.button-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 24px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 1.1rem;
+}
+
+.button-icon ion-icon {
+  margin-right: 8px;
+}
+
+.button-icon:hover {
+  background-color: #0056b3;
+}
+
+.list-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.3rem;
+}
+
+.photos-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.photo-wrapper {
+  width: 100%;
+  max-width: 400px;
+}
+
+.gray-box {
+  background-color: #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  border: 2px solid black;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.img-cosas-feas {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  border: 2px solid black;
+  border-radius: 8px;
+}
+.gray-box img {
+  background-color: black;
+}
+
+.button-below {
+  margin-top: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button-below ion-icon {
+  vertical-align: middle;
+}
+
+.like-button-green {
+  background-color: #28a745;
+}
+
+.like-button-red {
+  background-color: #dc3545;
+}
+
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.custom-spinner {
+  width: 50px;
+  height: 50px;
+  --spinner-color: #007bff;
+}

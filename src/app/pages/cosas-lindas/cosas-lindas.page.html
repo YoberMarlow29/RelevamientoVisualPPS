@@ -1,0 +1,38 @@
+<ion-content>
+  <div class="header-container">
+    <h1 class="header-title">COSAS LINDAS</h1>
+    <button class="button-back" routerLink="/home">
+      <ion-icon name="arrow-back-outline"></ion-icon> Volver atrás
+    </button>
+  </div>
+
+  <div class="buttons-container">
+    <button (click)="takePhoto()" class="button-icon">
+      <ion-icon name="camera-outline"></ion-icon> Tomar foto
+    </button>
+    <button [routerLink]="['/graficos']" [queryParams]="{ section: 'cosaslindas' }" class="button-icon">
+      <ion-icon name="bar-chart-outline"></ion-icon> Ver gráficos
+    </button>
+  </div>
+
+  <h2 class="list-title">Listado de imágenes:</h2>
+
+  <div class="spinner-container" *ngIf="isLoading">
+    <ion-spinner name="crescent" class="custom-spinner"></ion-spinner>
+  </div>
+
+  <div class="photos-container" *ngIf="!isLoading">
+    <div *ngFor="let photo of photos" class="photo-wrapper">
+      <div class="gray-box">
+        <img [src]="photo.rutaFoto" alt="Foto" class="img-cosas-lindas">
+        <p>{{ photo.nombre }} - {{ photo.hora | date: 'short' }}</p>
+        <button
+          class="button-below"
+          (click)="vote(photo)"
+          [ngClass]="{'like-button-green': photo.likes?.includes(user?.uid), 'like-button-red': !photo.likes?.includes(user?.uid)}">
+          <ion-icon name="checkmark-circle-sharp"></ion-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+</ion-content>

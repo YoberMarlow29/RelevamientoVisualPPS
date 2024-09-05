@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Relevamiento Visual</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content scroll-y="false">
+  <div class="container">
+    <img src="/assets/images/lente.png" class="logo" />
+
+    <div class="noFoto">
+
+      <form>
+        <ion-item class="items">
+          <ion-label position="floating" style="color: black">
+            Correo electrónico
+          </ion-label>
+          <ion-input
+            style="color: #000;"
+            type="email"
+            name="email"
+            [(ngModel)]="email"
+            required
+          ></ion-input>
+        </ion-item>
+
+        <ion-item class="items">
+          <ion-label position="floating">
+            <ion-text color="light">Contraseña</ion-text>
+          </ion-label>
+          <ion-input
+            color="light"
+            [(ngModel)]="password"
+            name="clave"
+            type="password"
+            required
+          ></ion-input>
+        </ion-item>
+
+        <ion-button class="botones" expand="block" type="submit" (click)="btnLogin()">
+          <ion-text>Iniciar sesión</ion-text>
+        </ion-button>
+      </form>
+      <div class="containerButtons">
+        <ion-grid fixed>
+          <ion-row>
+            <button class="ionButton" (click)="btnUsuarioUno()">Administrador</button>
+            <button class="ionButton" (click)="btnUsuarioDos()">Invitado</button>
+            <button (click)="btnUsuarioTres()" class="ionButton">Usuario</button>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </div>
+  </div>
+</ion-content>
